@@ -1,0 +1,9 @@
+#!/bin/bash
+echo Este script sirve para cambiar el nombre del equipo.
+echo Indica el nombre que le quieres dar al equipo
+read nombre
+echo Se esta cambiando el nombre del equipo por $nombre
+echo $nombre > /etc/hostname
+hostname $nombre
+echo Comprobamos que el nombre se ha cambiado
+cat /etc/hostname
